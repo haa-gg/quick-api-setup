@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coding Challenge</title>
+  <link href="styles.css" rel="stylesheet">
+  <script src="code.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+</head>
+
+<body>
+  <script type="text/javascript">
+    $.ajax({
+      url : 'serv.php', // my php file
+      type : 'GET', // type of the HTTP request
+      success : function(result){
+        var obj = jQuery.parseJSON(result);
+        // Working to make results visible on the page
+        //$('#result').innerHTML = obj;
+        console.log(obj);
+      }
+    });
+  </script>
+  heyo
+ <div id="restult"></div>
+</body>
+</html>
